@@ -8,7 +8,9 @@ import banner from '../../../image/942.png'
 
 export default class Index extends Component {
 
-  componentWillMount() { }
+  componentWillMount() {
+    console.log('1')
+   }
 
   componentDidMount() { }
 
