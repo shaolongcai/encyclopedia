@@ -2,14 +2,14 @@ import { Component } from 'react'
 import { View, Text, Image } from '@tarojs/components'
 import './index.scss'
 import Search from '../../../component/Search/index'
-import { Swiper, SwiperItem } from '@tarojs/components'
 import banner from '../../../image/942.png'
+import Filter from '../../../component/Filter/index'
+import InformationCard from '../../../component/InformationCard/index'
 
 
 export default class Index extends Component {
 
   componentWillMount() {
-    console.log('1')
    }
 
   componentDidMount() { }
@@ -27,6 +27,9 @@ export default class Index extends Component {
           <Search />
         </View>
         <Image className='banner' mode='aspectFill' src={banner} />
+        <Filter />
+        <InformationCard />
+        <InformationCard />
       </View>
     )
   }

@@ -1,27 +1,25 @@
 import { Component } from 'react'
 import { View, Text, Input } from '@tarojs/components'
 import './index.scss'
-import { AtIcon } from 'taro-ui'
+import { AtTag } from 'taro-ui'
+import Gap from '../Gap/index'
 
-
-class Search extends Component {
+class Filter extends Component {
 
     render() {
         return (
-            <View className='container'>
-                <View className='at-row'>
-                    <View className='at-col at-col__offset-2'>
-                        标签A
+            <View>
+                <View className='filter_container'>
+                    <View className='tagChild'>
+                        <AtTag className='tagA' active='true'>按照热度排序</AtTag>
+                        <AtTag className='tagB'>按照时间排序</AtTag>
                     </View>
-                    <View className='at-col at-col__offset-3'>
-                        标签B
-                    </View>
-                    <View className='at-col'>C</View>
                 </View>
+                <Gap size='normal' />
             </View>
         )
     }
 }
 
 
-export default Search
+export default Filter

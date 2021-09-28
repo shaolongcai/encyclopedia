@@ -1,0 +1,21 @@
+.filter_container{
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+    line-height: 100px;
+	position: relative;
+}
+
+
+.tagChild{
+    position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+
+.tagB{
+    margin-left: 20px;
+	
+}
