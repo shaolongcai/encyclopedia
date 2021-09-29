@@ -1,11 +1,9 @@
 import { Component } from 'react'
-import { View, Text, Image } from '@tarojs/components'
-import './index.scss'
-import Search from '../../../component/Search/index'
-import banner from '../../../image/942.png'
+import { View, Input } from '@tarojs/components'
+import './index.scss' 
 import Filter from '../../../component/Filter/index'
 import InformationCard from '../../../component/InformationCard/index'
-
+ 
 
 export default class Index extends Component {
 
@@ -23,10 +21,11 @@ export default class Index extends Component {
   render() {
     return (
       <View className='index'>
-        <View style="margin-top:10px">
-          <Search />
+        <View className='search_bg'>
+            <View className='search'>
+                <Input className='search_input' placeholder='请输入问题' focus='true'  />
+            </View>
         </View>
-        <Image className='banner' mode='aspectFill' src={banner} />
         <Filter />
         <InformationCard />
         <InformationCard />

@@ -1,0 +1,28 @@
+.search_bg{
+    height: 88px;
+    // background-color: red;
+    position: relative;
+}
+
+.search{
+    height: 56px;
+    width: 700px;
+    border-radius: 8px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -28px;
+    margin-left: -350px;
+}
+
+.search_input{
+    margin-left: 20px;
+    height: 100%
+}
+
+.input-placeholder{
+    font-size: 30px;
+    color: #BABABA;
+    margin: auto 0;
+}

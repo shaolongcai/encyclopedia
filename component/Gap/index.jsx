@@ -5,10 +5,8 @@
    */
 
 import { Component } from 'react'
-import { View, Text, } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import './index.scss'
-import { size } from 'lodash'
-
 
 class Gap extends Component {
     constructor(props){

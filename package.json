@@ -1,6 +1,7 @@
 {
   "name": "encyclopedia",
   "version": "1.0.0",
+  "homepage":"./",
   "private": true,
   "description": "小商店百科全书",
   "templateInfo": {
