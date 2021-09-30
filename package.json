@@ -1,7 +1,7 @@
 {
   "name": "encyclopedia",
   "version": "1.0.0",
-  "homepage":"./",
+  "homepage": "./",
   "private": true,
   "description": "小商店百科全书",
   "templateInfo": {
@@ -39,10 +39,12 @@
     "@babel/runtime": "^7.7.7",
     "@tarojs/cli": "3.3.5",
     "@tarojs/components": "3.3.5",
+    "@tarojs/plugin-mock": "0.0.7",
+    "@tarojs/react": "3.3.5",
     "@tarojs/runtime": "3.3.5",
     "@tarojs/taro": "3.3.5",
     "lodash": "4.17.15",
-    "@tarojs/react": "3.3.5",
+    "mockjs": "^1.1.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "taro-ui": "^3.0.0-alpha.3"

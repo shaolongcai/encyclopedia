@@ -11,7 +11,6 @@ import './index.scss'
 class Gap extends Component {
     constructor(props){
             super(props)
-            console.log(this.props.size)
             if(this.props.size == 'big' ){
                 var size= 'height:30px'
                 
@@ -32,9 +31,6 @@ class Gap extends Component {
         
 
     render() {
-       
-       
-       
 
         return (
             <View style={this.state.size} >
