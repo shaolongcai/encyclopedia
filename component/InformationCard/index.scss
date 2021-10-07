@@ -1,3 +1,15 @@
 .info_container{
     // width: 550px;
 }
+
+
+// 超过两行省略
+.AtCard{
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 3;
+    // line-clamp: 3;
+    // -webkit-box-orient: vertical;
+    // /*! autoprefixer: off */
+}

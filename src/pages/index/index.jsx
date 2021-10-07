@@ -12,7 +12,7 @@ export default class Index extends Component {
   constructor(props){
     super(props) 
     this.state = {
-      qaList:[]
+      qaList:[] 
     }
 } 
 
@@ -20,7 +20,6 @@ export default class Index extends Component {
     Taro.request({
       url:'http://127.0.0.1:9527/api/informationList',
       success:res=>{
-        console.log(typeof(res.data.array)) 
         this.setState({
           qaList:res.data.array
         })
@@ -28,21 +27,11 @@ export default class Index extends Component {
     })
   }
 
-  componentWillMount() {
-   } 
-
-  componentDidMount() { }
-
-  componentWillUnmount() { }
-
-  componentDidShow() { }
-
-  componentDidHide() { }
-
   render() {
     // 渲染QA的列表卡片
     const qalist = this.state.qaList.map((item)=>{
-      return <InformationCard />
+      console.log(item)
+      return <InformationCard title={item.title}  content={item.content} id={item.id}  />
     })
     return (
       <View className='index'>
