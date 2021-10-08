@@ -4,12 +4,12 @@ import { AtButton } from 'taro-ui'
 import './index.scss'
 import empty_box from '../../image/empty-box.png'
 
-class Empty extends Component { 
+class Empty extends Component {
     constructor(props){
-        super(props) 
-    } 
+        super(props)
+    }
 
-    render() { 
+    render() {
         return (
             <View className='empty_container'>
                 <View className='empty_img'>

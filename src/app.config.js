@@ -1,8 +1,9 @@
 export default {
   pages: [
     'pages/index/index',
-    'pages/search/index',
     'pages/detail/index',
+    'pages/search/index',
+    
     
   ],
   window: {

@@ -27,6 +27,11 @@ export default class Index extends Component {
     })
   }
 
+  // 前往搜索页面
+  toSearch(){
+    
+  }
+
   render() {
     // 渲染QA的列表卡片
     const qalist = this.state.qaList.map((item)=>{
@@ -35,7 +40,7 @@ export default class Index extends Component {
     })
     return (
       <View className='index'>
-        <View style="margin-top:10px">
+        <View style="margin-top:10px" onClick={this.toSearch.bind(this)}>
           <Search />
         </View>
         <Image className='banner' mode='aspectFill' src={banner} />
