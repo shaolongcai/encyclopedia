@@ -1,52 +1,71 @@
 import { Component } from 'react'
 import { View, Input } from '@tarojs/components'
-import './index.scss'
+import Taro, { offWindowResize } from '@tarojs/taro'
 import Filter from '../../../component/Filter/index'
 import InformationCard from '../../../component/InformationCard/index'
 import Empty from '../../../component/Empty'
-import { isEmpty } from 'lodash'
+import './index.scss'
+
 
 
 export default class Index extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
-    this.state={
-      isEmpty:'true'
+    this.state = {
+      searchData: [],
+      empty:false
     }
   }
 
-  componentWillMount() {
+  onLoad() {
+
   }
 
-  componentDidMount() { }
-
-  componentWillUnmount() { }
-
-  componentDidShow() { }
-
-  componentDidHide() { }
+  onConfirm(e) {
+    const keyworld = e.detail.value
+    Taro.request({
+      url: 'http://127.0.0.1:9527/api/informationSearch',
+      data: {
+        keyworld: keyworld
+      },
+      success: res => {
+        console.log(res)
+        if(res.data == 0){
+          this.setState({
+            searchData: res.data,
+            empty:true
+          })
+        }
+        else{
+          this.setState({
+            searchData: res.data,
+            empty:false
+          })
+        }
+      }
+    })
+  }
 
   render() {
-    console.log(this.state.isEmpty)
-    const isEmpty = this.state.isEmpty
+    const searchData = this.state.searchData
+    const qaList = searchData.map(item => {
+      return <InformationCard title={item.title} content={item.content} id={item.id} />
+    })
     return (
       <View className='index'>
-        {isEmpty ?
-        <View className='empty'>
-          <Empty  text='没有搜索结果' btn_text='重置搜索' />
+        <View className='search_bg'>
+          <View className='search'>
+            <Input className='search_input' placeholder='请输入问题' focus='true' autoFocus='true' onConfirm={this.onConfirm.bind(this)} />
+          </View>
         </View>
+        {this.state.empty ?
+          <View className='empty'>
+            <Empty text='没有搜索结果' btn_text='联系客服' openType='contact' />
+          </View>
           :
           <View className='content'>
-            <View className='search_bg'>
-              <View className='search'>
-                <Input className='search_input' placeholder='请输入问题' focus='true' />
-              </View>
-            </View>
-            <Filter />
-            <InformationCard />
-            <InformationCard />
-            <InformationCard />
-            <InformationCard />
+            {searchData.length == 0? '': <Filter />}
+            {qaList}
           </View>
         }
       </View>

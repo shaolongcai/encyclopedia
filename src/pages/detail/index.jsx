@@ -9,10 +9,10 @@ export default class Index extends Component {
   constructor(props){
     super(props)
     this.state={
-      detail:{}
+      detail:{} 
     }
   }
-     
+      
   onLoad(e){
     console.log(e)
     const id = e.id 

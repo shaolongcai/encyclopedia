@@ -19,7 +19,7 @@ class Empty extends Component {
                     <Text>{this.props.text}</Text>
                 </View>
                 <View className='empty_btn'>
-                    <AtButton type='primary' size='normal' >{this.props.btn_text}</AtButton>
+                    <AtButton type='primary' size='normal' openType={this.props.openType} >{this.props.btn_text}</AtButton>
                 </View>
                 
 
