@@ -47,6 +47,7 @@
     "mockjs": "^1.1.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "taro-list": "^1.0.8",
     "taro-ui": "^3.0.0-alpha.3"
   },
   "devDependencies": {

@@ -13,7 +13,12 @@ export default class Index extends Component {
     super(props)
     this.state = {
       searchData: [],
-      empty:false
+      empty:false,
+      page: 0,
+      size: 2,
+      type: 'hot',
+      moreStatus: 'more',
+      keyworld:''
     }
   }
 
@@ -23,10 +28,50 @@ export default class Index extends Component {
 
   onConfirm(e) {
     const keyworld = e.detail.value
+    const page = this.state.page
+    const size = this.state.size
+    const type = this.state.type
     Taro.request({
-      url: 'http://127.0.0.1:9527/api/informationSearch',
+      url: 'https://segment-4gezmw2c75430e48-1255646301.ap-shanghai.app.tcloudbase.com/search_info_list',
       data: {
-        keyworld: keyworld
+        keyworld: keyworld,
+        page:page,
+        size:size,
+        type:type
+      },
+      success: res => {
+        console.log(res)
+        if(res.data == 0){
+          this.setState({
+            searchData: res.data,
+            empty:true,
+            keyworld:keyworld
+          })
+        }
+        else{
+          this.setState({
+            searchData: res.data,
+            empty:false,
+            keyworld:keyworld
+          })
+        }
+      }
+    })
+  }
+
+   // 处理子组件的数据流;接受一个数组,一个类型
+   handleChildrendData(type){
+    const page = this.state.page
+    const size = this.state.size
+    const keyworld = this.state.keyworld
+    const number = (page+1)*size
+    Taro.request({
+      url: 'https://segment-4gezmw2c75430e48-1255646301.ap-shanghai.app.tcloudbase.com/search_info_list',
+      data: {
+        keyworld: keyworld,
+        page:0,
+        size:number,
+        type:type
       },
       success: res => {
         console.log(res)
@@ -64,7 +109,7 @@ export default class Index extends Component {
           </View>
           :
           <View className='content'>
-            {searchData.length == 0? '': <Filter />}
+            {searchData.length == 0? '': <Filter handleChildrendData={this.handleChildrendData.bind(this)}/>}
             {qaList}
           </View>
         }
