@@ -1,18 +1,21 @@
-.container{
-    background-color:white;
-    text-align: center;
-    width: 710px;
-    height: 56px;
-    border-radius: 12px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  width: 710px;
+  height: 56px;
+  border-radius: 12px;
 }
 
-.search_text{
-    font-size: 30px;
-    color: #BABABA;
-    margin-left: 10px;
+.search_text {
+  font-size: 30px;
+  color: #bababa;
+  margin-left: 10px;
 }
 
-.search_input{
-    width: 710px;
-    height: 56px;
+.search_input {
+  width: 710px;
+  height: 56px;
 }

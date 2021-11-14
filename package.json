@@ -54,14 +54,17 @@
     "@babel/core": "^7.8.0",
     "@tarojs/mini-runner": "3.3.5",
     "@tarojs/webpack-runner": "3.3.5",
+    "@types/react": "^17.0.2",
     "@types/webpack-env": "^1.13.6",
     "babel-preset-taro": "3.3.5",
+    "cache-loader": "^4.1.0",
     "eslint": "^6.8.0",
     "eslint-config-taro": "3.3.5",
-    "stylelint": "9.3.0",
-    "@types/react": "^17.0.2",
-    "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "stylelint": "9.3.0",
+    "taro-plugin-compiler-optimization": "^1.0.1",
+    "thread-loader": "^3.0.4"
   }
 }

@@ -1,5 +1,9 @@
-@import "~taro-ui/dist/style/index.scss";
+@import '~taro-ui/dist/style/index.scss';
 
-page{
-    background-color: #F5F5F9;
+page {
+  background-color: #f5f5f9;
+}
+
+.df-hover-class {
+  opacity: 0.65;
 }
