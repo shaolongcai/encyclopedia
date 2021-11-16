@@ -1,44 +1,69 @@
-.useful_con{
-    background-color: white;
-    display: flex;
-    height: 68px;
-   
-    padding-left:20px ;
-    align-items: center;
+.useful_con {
+  background-color: white;
+  display: flex;
+  padding-left: 21px;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  height: 74rpx;
 }
 
-.userful_text{
-    width: 226px;
-    font-size: 32px;
-    color: #000000d5;
+.userful_text {
+  font-size: 33px;
+  color: #000001d5;
 }
 
-.like{
-    background-color: white;
-    border: solid 1px #F2F2F2;
-    line-height: 50px;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
+.like {
+  border-radius: 9rpx;
+  background-color: white;
+  border: solid 2px #f2f2f2;
+  line-height: 51px;
+  text-align: center;
+  width: 51px;
+  height: 51px;
+  margin-left: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.like_img{
-    width: 34px;
-    height: 34px;
+.like_img {
+  width: 35px;
+  height: 35px;
 }
 
-.unlike{
-    background-color: white;
-    border: solid 1px #F2F2F2;
-    line-height: 50px;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
+.unlike {
+  border-radius: 9rpx;
+  background-color: white;
+  border: solid 2px #f2f2f2;
+  line-height: 51px;
+  text-align: center;
+  width: 51px;
+  height: 51px;
+  margin-left: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.unlike_img{
-    width: 34px;
-    height: 34px;
+.unlike_img {
+  width: 35px;
+  height: 35px;
+}
+
+.share {
+  border-radius: 9rpx;
+  border: 2px solid #f2f2f2;
+  padding: 9rpx;
+  box-sizing: border-box;
+  margin-left: 21px;
+  width: auto;
+  height: 51px;
+  display: flex;
+  font-size: 25rpx;
+  justify-content: center;
+  align-items: center;
+  .text {
+    margin-left: 17rpx;
+  }
 }
